@@ -105,6 +105,31 @@ body {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: absolute;
+    width: 250px;
+    height: 100%;
+    z-index: 1000;
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .main {
+    grid-column: 1 / -1;
+  }
+}
+
+
+
+
 {/*
   .body {
   margin: 0;
