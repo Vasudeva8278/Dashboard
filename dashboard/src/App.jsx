@@ -13,12 +13,12 @@ function App() {
   }
 
   return (
-    <div className='grid-container'>
+    <div className='grid-container text-white'>
       <Sidebar />
-      <div>
+     
         <Header />
         <Home />
-      </div>
+    
       
     </div>
   )
