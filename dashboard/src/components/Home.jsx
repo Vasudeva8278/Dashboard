@@ -2,6 +2,8 @@ import React from 'react'
 import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill } from 'react-icons/bs'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, PieChart, Pie, Cell } from 'recharts';
 import "../css/home.css";
+import AphexChart from './AphexChart';
+import Candle from './Candle';
 
 function Home() {
   const data = [
@@ -33,7 +35,7 @@ function Home() {
         <div className='card'>
           <div className='card-inner'>
             <h3>PRODUCTS</h3>
-            <BsFillArchiveFill className='card_icon' />
+            <BsFillArchiveFill className='card_icon text-white' />
           </div>
           <ResponsiveContainer width="100%" height={200}>
             <PieChart>
@@ -179,8 +181,22 @@ function Home() {
             <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
             <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
           </LineChart>
+       
         </ResponsiveContainer>
+        <div className='charts'>
+        <ResponsiveContainer >
+        
+        <AphexChart className="text-white" />
+       
+      
+        </ResponsiveContainer>
+        <ResponsiveContainer>
+            <Candle />
+        </ResponsiveContainer>
+
+        </div>
       </div>
+     
     </main>
   )
 }

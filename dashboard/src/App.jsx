@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 
 
+
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
 
@@ -18,6 +19,8 @@ function App() {
      
         <Header />
         <Home />
+        
+        
     
       
     </div>
