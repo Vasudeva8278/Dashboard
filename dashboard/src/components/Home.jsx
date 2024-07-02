@@ -4,6 +4,9 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import "../css/home.css";
 import AphexChart from './AphexChart';
 import Candle from './Candle';
+import ReactDOM from 'react-dom';
+import HorizontalRange from './HorizontalRange';
+
 
 function Home() {
   const data = [
@@ -184,17 +187,22 @@ function Home() {
        
         </ResponsiveContainer>
         <div className='charts'>
-        <ResponsiveContainer >
-        
-        <AphexChart className="text-white" />
-       
+        <ResponsiveContainer width="100%" height={400} >
+      
+       <HorizontalRange />
       
         </ResponsiveContainer>
-        <ResponsiveContainer>
-            <Candle />
-        </ResponsiveContainer>
+   
 
         </div>
+        <div>
+        <ResponsiveContainer>
+            <Candle
+            />
+        </ResponsiveContainer>
+        </div>
+        
+
       </div>
      
     </main>
